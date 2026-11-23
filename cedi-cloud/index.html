@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CEDI CLOUD · Consola de nube simulada</title>
+  <meta name="description" content="CEDI CLOUD: consola de nube genérica y simulada para entender IAM, almacenamiento, analítica, computación, bases de datos e IA.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/stage.css">
+  <link rel="stylesheet" href="css/classroom.css">
+  <link rel="stylesheet" href="css/escenas.css">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <!-- ============ BARRA SUPERIOR ============ -->
+  <header class="topbar" role="banner">
+    <button id="btn-menu" class="icon-btn" type="button" aria-label="Mostrar u ocultar el menú de servicios" aria-controls="sidebar" aria-expanded="true">
+      <i data-icon="menu" data-size="22"></i>
+    </button>
+
+    <a class="brand" href="#/inicio" aria-label="CEDI CLOUD, ir al panel">
+      <span class="brand-mark"><i data-icon="cloud" data-size="19"></i></span>
+      <span class="brand-name">CEDI <b>CLOUD</b></span>
+    </a>
+
+    <div class="search" role="search">
+      <i data-icon="search" data-size="18" class="s-ic"></i>
+      <input id="q" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Buscar servicios y conceptos (p. ej. bucket, shuffle, BigQuery)"
+             aria-label="Buscar servicios y conceptos" role="combobox"
+             aria-expanded="false" aria-controls="search-results" aria-autocomplete="list">
+      <kbd aria-hidden="true">/</kbd>
+      <div id="search-results" class="results" role="listbox" hidden></div>
+    </div>
+
+    <div class="top-actions">
+      <button id="pick-project" class="pick" type="button" aria-haspopup="listbox" aria-expanded="false">
+        <i data-icon="folder"></i>
+        <span class="pick-txt"><small>Proyecto</small><span class="v" id="project-label"></span></span>
+        <i data-icon="chevron-down" data-size="16"></i>
+      </button>
+      <button id="pick-region" class="pick" type="button" aria-haspopup="listbox" aria-expanded="false">
+        <i data-icon="globe"></i>
+        <span class="pick-txt"><small>Región</small><span class="v" id="region-label"></span></span>
+        <i data-icon="chevron-down" data-size="16"></i>
+      </button>
+      <span class="sim-pill" title="No hay servidores reales: todo se simula en tu navegador"><span class="pulse"></span>Simulación</span>
+    </div>
+  </header>
+
+  <!-- ============ MENÚ LATERAL ============ -->
+  <aside id="sidebar" class="sidebar" aria-label="Menú de servicios">
+    <nav id="nav"></nav>
+    <div class="side-foot">
+      <span>Simulación didáctica.</span> Nada de lo que ves ocurre en un servidor real.
+    </div>
+  </aside>
+  <div id="backdrop" class="backdrop"></div>
+
+  <!-- ============ CONTENIDO ============ -->
+  <main id="main" tabindex="-1"></main>
+
+  <div id="tip" class="tip" role="tooltip" hidden></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <!-- Núcleo -->
+  <script src="js/icons.js"></script>
+  <script src="js/glossary.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/extend.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/console.js"></script>
+  <script src="js/stage.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/report.js"></script>
+  <script src="js/classroom.js"></script>
+  <script src="js/quizzes-base.js"></script>
+  <script src="js/escenas.js"></script>
+  <script src="js/escenas-a.js"></script>
+  <script src="js/escenas-b.js"></script>
+  <script src="js/escenas-c.js"></script>
+
+  <!-- Servicios (se añaden uno a uno en las siguientes partes) -->
+  <script src="js/svc-iam.js"></script>
+  <script src="js/svc-almacenamiento.js"></script>
+  <script src="js/svc-analitica.js"></script>
+  <script src="js/svc-computacion.js"></script>
+  <script src="js/svc-bases-de-datos.js"></script>
+  <script src="js/svc-ia.js"></script>
+  <script src="js/svc-regiones-zonas.js"></script>
+  <script src="js/svc-facturacion.js"></script>
+  <script src="js/svc-hadoop.js"></script>
+  <script src="js/svc-monitorizacion.js"></script>
+  <script src="js/svc-red-seguridad.js"></script>
+  <script src="js/svc-vms-autoescalado.js"></script>
+  <script src="js/svc-modelos-servicio.js"></script>
+  <script src="js/svc-ingesta-orquestacion.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/lecciones.js"></script>
+  <script src="js/svc-terminal.js"></script>
+  <script src="js/svc-spark.js"></script>
+  <script src="js/svc-formatos-datos.js"></script>
+  <script src="js/svc-contenedores.js"></script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

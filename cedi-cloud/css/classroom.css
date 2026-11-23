@@ -1,0 +1,45 @@
+/* Herramientas de clase: modo guiado, cuestionarios y progreso. */
+.tour { position: sticky; top: calc(var(--topbar-h, 56px) + 8px); z-index: 30; margin: 0 0 12px; background: #0f172a; color: #e2e8f0; border-radius: 12px; padding: 12px 14px; box-shadow: 0 8px 24px rgba(15, 23, 42, .28); display: grid; gap: 8px; }
+.tour b { color: #fff; } .tour small { color: #94a3b8; }
+.tour .tour-btns { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.tour button { font: 600 12.5px var(--sans, inherit); border-radius: 8px; border: 1px solid #475569; background: transparent; color: #e2e8f0; padding: 5px 12px; cursor: pointer; }
+.tour button.primary { background: #2f6df6; border-color: #2f6df6; color: #fff; }
+.tour button:disabled { opacity: .4; cursor: default; }
+.tour .skip { margin-left: auto; border-color: transparent; color: #94a3b8; }
+.tour-hl { outline: 3px solid #2f6df6; outline-offset: 3px; border-radius: 10px; transition: outline-color .2s; }
+.info.tour-hl { border-radius: 50%; }
+.guide-btn-unused { font: 600 12px var(--sans, inherit); border: 1px solid var(--line-2); background: #fff; color: var(--ink-2); border-radius: 99px; padding: 3px 11px; cursor: pointer; margin-left: 10px; }
+.guide-btn:hover { border-color: #2f6df6; color: #2f6df6; }
+
+.quiz { margin: 12px 0 0; border: 1.5px solid #bfdbfe; background: #f5f9ff; border-radius: 12px; padding: 12px 14px; display: grid; gap: 10px; }
+.quiz h4 { margin: 0; font-size: 13.5px; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.quiz h4 small { color: var(--muted); font-weight: 500; }
+.quiz .qq p { margin: 0 0 6px; font-weight: 600; font-size: 13px; }
+.quiz .qopts { display: grid; gap: 5px; }
+.quiz .qopts button { text-align: left; font: 500 12.5px var(--sans, inherit); background: #fff; border: 1px solid var(--line-2); border-radius: 8px; padding: 7px 10px; cursor: pointer; color: var(--ink); }
+.quiz .qopts button:hover:not(:disabled) { border-color: #2f6df6; }
+.quiz .qopts button.good { background: #d1fae5; border-color: #10b981; }
+.quiz .qopts button.bad { background: #fee2e2; border-color: #ef4444; }
+.quiz .qopts button:disabled { cursor: default; }
+.quiz .qexp { font-size: 12px; color: var(--ink-2); margin-top: 6px; }
+.quiz .qscore { font-weight: 700; color: #1d4ed8; }
+
+.progress { padding: 10px 18px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--ink-2); white-space: normal; }
+.progress .pbar { height: 6px; background: #e2e8f0; border-radius: 99px; margin: 6px 0 4px; overflow: hidden; }
+.progress .pbar i { display: block; height: 100%; background: #10b981; width: 0; transition: width .4s; }
+.progress button { border: 0; background: none; color: var(--muted); font-size: 11px; text-decoration: underline; cursor: pointer; padding: 0; }
+.nav-link.visited .t small::after { content: " ✓"; color: #10b981; font-weight: 700; }
+body.side-collapsed .progress { display: none; }
+@media (max-width: 1180px) { .resp .lay { white-space: normal; } .resp td, .resp th { padding: 4px 5px; } }
+
+.progress .pdf-btn { background: #2f6df6; color: #fff; text-decoration: none; border-radius: 8px; padding: 6px 10px; font-weight: 600; font-size: 11.5px; margin: 4px 0; display: inline-block; }
+.modal-bg { position: fixed; inset: 0; z-index: 100; background: rgba(15, 23, 42, .55); display: grid; place-items: center; padding: 16px; }
+.modal { background: #fff; border-radius: 14px; padding: 20px; width: min(420px, 100%); display: grid; gap: 10px; box-shadow: 0 20px 50px rgba(15, 23, 42, .35); }
+.modal h3 { margin: 0; font-size: 17px; } .modal p { margin: 0; color: var(--ink-2); font-size: 13px; }
+.modal input { font: inherit; padding: 9px 11px; border: 1px solid var(--line-2); border-radius: 8px; }
+.modal-btns { display: flex; justify-content: flex-end; gap: 8px; }
+.modal-btns button { font: 600 13px var(--sans, inherit); border-radius: 8px; border: 1px solid var(--line-2); background: #fff; padding: 7px 14px; cursor: pointer; }
+.modal-btns .primary { background: #2f6df6; border-color: #2f6df6; color: #fff; }
+
+/* Tabla de responsabilidad: la clase genérica .cell (cuadrícula) no debe aplicarse a las celdas de tabla */
+.resp td.cell { aspect-ratio: auto; }

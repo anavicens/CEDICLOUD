@@ -1,0 +1,30 @@
+/* Escenas dibujadas (SVG) de los ejemplos clave */
+.sc { margin-top: 4px; }
+.sc svg { width: 100%; height: auto; display: block; overflow: visible; }
+.sc text { font-family: var(--mono, ui-monospace, monospace); font-size: 11px; font-weight: 600; fill: #334155; }
+.sc .t-sm { font-size: 9.5px; fill: #64748b; font-weight: 600; }
+.sc .t-b { font-size: 13px; font-weight: 800; fill: #0f172a; }
+.sc .t-xl { font-size: 24px; font-weight: 800; fill: #0f172a; }
+.sc .t-w { fill: #fff; }
+.sc .card { fill: #fff; stroke: #d5deeb; stroke-width: 1.5; filter: url(#sh); }
+.sc .zone { fill: #f4f7fc; stroke: #d5deeb; stroke-width: 1.2; stroke-dasharray: 5 5; }
+.sc .slot { fill: none; stroke: #cbd5e1; stroke-width: 1.5; stroke-dasharray: 4 5; }
+.sc .pipe { stroke: #dbe4f0; stroke-width: 3; fill: none; stroke-linecap: round; }
+.sc .flowl { stroke: #2f6df6; stroke-width: 2; fill: none; stroke-dasharray: 4 7; opacity: .5; animation: scdash calc(.9s * var(--k, 1)) linear infinite; }
+@keyframes scdash { to { stroke-dashoffset: -22; } }
+.sc .bar, .sc .led, .sc .state { transition: width calc(.4s * var(--k, 1)), fill calc(.35s * var(--k, 1)), stroke calc(.35s * var(--k, 1)), opacity calc(.4s * var(--k, 1)); }
+.sc .msg { transition: transform calc(.45s * var(--k, 1)) cubic-bezier(.4, 0, .2, 1), opacity calc(.3s * var(--k, 1)); }
+.sc .spin { animation: scspin calc(.9s * var(--k, 1)) linear infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes scspin { to { transform: rotate(360deg); } }
+.sc .blink { animation: scblink calc(.5s * var(--k, 1)) steps(2) infinite; }
+@keyframes scblink { 50% { opacity: .25; } }
+.sc .pillon { fill: #2f6df6; } .sc .pilloff { fill: #e2e8f0; }
+.sc .pill-t { fill: #64748b; } .sc .pillon + text { fill: #fff; }
+.sc .gone { opacity: .18; }
+.sc .ghost { opacity: 0; }
+.sc-kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 8px; }
+.sc-kpis > div { background: #fff; border: 1px solid var(--line, #e2e8f0); border-radius: 10px; padding: 7px 10px; }
+.sc-kpis b { display: block; font: 800 17px var(--mono, monospace); color: #0f172a; transition: color .3s; }
+.sc-kpis b.k-ok { color: #059669; } .sc-kpis b.k-warn { color: #d97706; } .sc-kpis b.k-bad { color: #dc2626; }
+.sc-kpis span { font-size: 11px; color: var(--muted, #64748b); }
+@media (max-width: 700px) { .sc text { font-size: 12px; } }

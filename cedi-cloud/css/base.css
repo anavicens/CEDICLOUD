@@ -1,0 +1,70 @@
+:root {
+  --ink: #0f172a;
+  --ink-2: #334155;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --line-2: #cbd5e1;
+  --bg: #f3f6fb;
+  --panel: #ffffff;
+  --panel-2: #f8fafc;
+
+  --brand: #2f6df6;
+  --brand-ink: #1d4ed8;
+  --brand-soft: #e8f0ff;
+  --teal: #0d9488;
+  --ok: #10b981;
+  --warn: #f59e0b;
+  --err: #ef4444;
+
+  --top: #0b1220;
+  --top-2: #141d30;
+  --top-line: #26324b;
+
+  --gcp: #4285f4;
+  --aws: #ff9900;
+  --azure: #1fa8e6;
+
+  --radius: 12px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, .06), 0 1px 3px rgba(15, 23, 42, .05);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, .12), 0 2px 6px rgba(15, 23, 42, .06);
+
+  --topbar-h: 58px;
+  --side-w: 268px;
+  --side-w-collapsed: 66px;
+
+  --font: Inter, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--topbar-h) + 16px); }
+body {
+  margin: 0;
+  font: 14px/1.55 var(--font);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, p, dl, dd, ul { margin: 0; padding: 0; }
+ul { list-style: none; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+a { color: var(--brand-ink); text-decoration: none; }
+a:hover { text-decoration: underline; }
+mark { background: #fde68a; color: inherit; border-radius: 3px; padding: 0 1px; }
+[hidden] { display: none !important; }
+
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; border-radius: 6px; }
+
+a.skip, .skip-link { position: absolute; left: -999px; top: 8px; z-index: 200; background: #fff; padding: 8px 14px; border-radius: 8px; box-shadow: var(--shadow-md); }
+a.skip:focus, .skip-link:focus { left: 8px; }
+
+.mono { font-family: var(--mono); font-size: .92em; }
+.muted { color: var(--muted); }
+
+svg.ic { flex: none; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.dot.gcp { background: var(--gcp); }
+.dot.aws { background: var(--aws); }
+.dot.azure { background: var(--azure); }
